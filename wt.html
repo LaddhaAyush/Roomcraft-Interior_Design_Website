@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="static/wt.css">
+  <title>Luxury Spaces</title>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <style>
+    .curtain {
+      position: fixed;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #333;
+      z-index: 1000; /* High z-index to ensure visibility over other content */
+      transition: transform 2s ease-in-out; /* Transition duration for the animation */
+    }
+
+    .curtain-left {
+      left: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .curtain-right {
+      right: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .open-curtain-left {
+      transform: translateX(-100%); /* Final position for left curtain */
+    }
+
+    .open-curtain-right {
+      transform: translateX(100%); /* Final position for right curtain */
+    }
+
+
+    
+    .section1 {
+      position: relative;
+      height: 100vh; /* Set the height to the viewport height */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://as1.ftcdn.net/v2/jpg/05/70/06/42/1000_F_570064253_HUeFuqaiyBdS35ZBUVrnvld7ai81LTYS.jpg');
+      background-size: cover; /* Ensure the background image covers the entire section */
+      background-position: center; /* Center the background image */
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      color: white; /* Set text color to white */
+      text-align: center; /* Align text at the center */
+      padding: 0 50px; /* Add padding to prevent text from touching edges */
+    }
+
+    .heading1 {
+      font-size: 80px;
+      font-weight: normal;
+    }
+
+
+    .footer {
+      background-color: #333; /* Dark background for contrast */
+      color: white; /* White text for visibility */
+      padding: 40px 20px; /* Adequate padding for spacing */
+      font-family: MyFont; /* Use the custom font */
+    }
+    
+    .footer h3 {
+      color: white; /* Ensure headers are visible */
+      font-size: 24px; /* Slightly larger font for emphasis */
+      margin-bottom: 15px; /* Space below the header */
+    }
+    
+    .footer a {
+      color: #ddd; /* Lighter color for links */
+      text-decoration: none; /* No underline on links */
+      transition: color 0.3s ease; /* Smooth transition on hover */
+    }
+    
+    .footer a:hover {
+      color: white; /* Change color on hover for links */
+    }
+    
+    .footer .container {
+      max-width: 1200px; /* Set a maximum width for the container */
+      margin: auto; /* Center the content */
+    }
+    
+    .footer .row {
+      display: flex; /* Use flexbox for row layout */
+      justify-content: space-between; /* Distribute columns evenly */
+    }
+    
+    .footer .col-md-4,
+    .footer .col-md-3,
+    .footer .col-md-2 {
+      flex: 1; /* Ensure columns take equal space */
+    }
+    
+    .footer ul {
+      list-style-type: none; /* Remove default list styles */
+      padding: 0; /* Reset padding */
+      margin: 0; /* Reset margin */
+    }
+    
+    .footer ul li {
+      margin-bottom: 10px; /* Space between list items */
+    }
+    
+    .footer address p {
+      margin: 0; /* Remove margin from address paragraphs */
+    }
+    
+    /* Adjust layout for smaller screens */
+    @media only screen and (max-width: 768px) {
+      .footer .row {
+        flex-direction: column; /* Stacked layout for mobile */
+        text-align: center; /* Center the text */
+      }
+      .footer .col-md-4,
+      .footer .col-md-3,
+      .footer .col-md-2 {
+        margin-bottom: 20px; /* Add spacing between sections */
+      }
+    }
+    
+
+
+  </style>
+
+
+
+</head>
+<body>
+
+    <div class="curtain curtain-left" id="curtain-left"></div>
+  <div class="curtain curtain-right" id="curtain-right"></div>
+
+  <script>
+    // Open the curtains after a short delay
+    setTimeout(() => {
+      document.getElementById('curtain-left').classList.add('open-curtain-left');
+      document.getElementById('curtain-right').classList.add('open-curtain-right');
+    }, 500); // Delay in milliseconds to start the animation
+  </script>
+
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({ duration: 1200, easing: 'ease-in-out' });
+  </script>
+
+  <!-- Section 1 with AOS animation -->
+  <center>
+  <section class="section1" data-aos="fade-in">
+    <h1 class="heading1">Together we make a Family</h1>
+    <h1 class="heading2"></h1>
+    <button style="position: absolute;top: 460px;font-size: 25px;background-color: white;padding: 15px 30px;border-radius: 8px;border: none;font-weight: 200;"><a href="/index1" style="color: black;">Get Started</a></button>
+    <!-- <a href="/login">Login</a> -->
+    
+  </section>
+  
+</center>
+
+  <!-- Section 2 with multiple AOS animations -->
+  <section class="section2">
+    <div class="div1" data-aos="fade-up">
+      <p>Glimpse around the corner and uncover the subtle details that elevate RoomCraft to a new level of luxurious living.</p>
+    </div>
+
+    <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-up">Trending</h1>
+
+    <!-- Gallery section with AOS animations -->
+    <div class="container" data-aos="fade-right">
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1" data-aos="zoom-in">
+          <img src="https://media.designcafe.com/wp-content/uploads/2019/12/09102702/modern-living-room-design-with-tv-unit-designed-with-storage.jpg" alt="Gallery image 1" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Industrial interior style</div>
+          </div>
+        </figure>
+
+        <figure class="gallery__item gallery__item--2" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://media.designcafe.com/wp-content/uploads/2020/03/21012613/luxury-living-room-designs.jpg" alt="Gallery image 2" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Mid-century modern interior style</div>
+          </div>
+        </figure>
+
+        <!-- Correcting nested divs for figure 3 -->
+        <figure class="gallery__item gallery__item--3" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://fancyhouse-design.com/wp-content/uploads/2023/11/The-interior-design-of-this-living-room-is-heightened-by-the-rich-textures-of-stone.jpg" alt="Gallery image 3" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Funky retro interior style</div>
+          </div>
+        </figure>
+
+        <!-- Correcting indentation for other figures -->
+        <figure class="gallery__item gallery__item--4" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://fancyhouse-design.com/wp-content/uploads/2023/11/A-spacious-interior-is-graced-with-a-sofa-that-exudes-sophistication-in-this-living-room.jpg" alt="Gallery image 4" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Urban interior style</div>
+          </div>
+        </figure>
+
+        <figure class="gallery__item gallery__item--5" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://www.mydomaine.com/thmb/y1RVaXb58k_J97ujG4RybPJsN6w=/700x0/filters:no_upscale():strip_icc()/cdn.cliqueinc.com__cache__posts__212361__-2030971-1483470365.700x0c-bcb3742ec42e4ef297e814adf2ca7870-855bb6998a684a5ebffc99e1d4c922e1.jpg" alt="Gallery image 5" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Modern minimalist interior style</div>
+          </div>
+        </figure>
+
+        <figure class="gallery__item gallery__item--6" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://www.decorpot.com/images/1972745586modern-and-luxurious-living-room-interior-%20design-ideas_main.jpg" alt="Gallery image 6" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Modern contemporary interior style</div>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+
+
+    
+    <h1 style="text-align: center;font-size: 50px;font-weight: normal;">Explore your Living Room types</h1>
+
+    <div class="div1">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://blog.urbancompany.com/wp-content/uploads/2018/02/living-room-home-201504-yjmag-minimalism-768x432-1.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">MINIMALISTIC</h2>
+                        <p class="description">The minimalistic style is a great choice for modern homes, requiring minimum maintenance and giving the house a clean and organized look.A minimalist living room setup is calming, relaxing, and clutter-free. Interestingly, though, designers tend to talk about what minimalist living rooms do have, not what they don't have.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://blog.urbancompany.com/wp-content/uploads/2018/02/blog_feature2_http-_www.home-designing.com_2015_06_3-white-apartments-in-different-styles_scandinavian-living-room-2-768x538-1.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">CONTEMPORARY</h2>
+                        <p class="description">The contemporary style includes elements of modern and trending designs in furniture, lamps, other decor items, upholstery and so on. For instance, coloured glass bottles, fairy lights, stripes etc have been recently trending in interior design.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://blog.urbancompany.com/wp-content/uploads/2018/02/Cup-of-Jo_Emily-Henderson_Living-Room-2-768x614-1.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">ECLECTIC</h2>
+                        <p class="description">An eclectic living room should give a free-spirited, bohemian, curated, and artistic vibes.Eclectic is a mix of many styles, a style that approves patterns and colors from different nature and adapts them in one attaining modern and dramatic appearance.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://www.dsigndpo.com/blog/wp-content/uploads/2022/10/Rustic-Living-Room-Interior-design.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">RUSTIC LIVING ROOM</h2>
+                        <p class="description">Applying a rustic living room style will give your house a more natural appearance.Adding some plants, animal wallpaper design or a jungle atmosphere, are some good options. For a more exotic appearance, paint the entire space in dark and brown hues.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2024-01-25-at-12-11-34-pm-65b2964988335.png?crop=1xw:1xh;center,top&resize=980:*" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">MARBLE LIVING ROOM</h2>
+                        <p class="description">A clean and delicate room will always be a timeless aesthetic. This Azura marble fireplace wall, flanked by a pair of facing sofas, sets the scene for fabulous face-to-face time with loved ones.</p>
+                        <button class="button">View More</button>
+                    </div>
+                 </div>
+
+                 <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/736x/3e/69/01/3e6901c928adfe917ec226ff0b111bcb.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">INDUSTRIAL LIVING ROOM</h2>
+                        <p class="description">While other styles try to conceal building materials, industrial decor is about embracing the raw, unfinished look. Think exposed bricks, wooden floors, exposed iron pipes, wood and metal surfaces, and vintage or worn-looking furniture and accessories (like wooden crate tables).</p>
+                        <button class="button">View More</button>
+                    </div>
+                 </div>
+
+                 
+                 <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://www.dsigndpo.com/blog/wp-content/uploads/2022/10/Victorian-Living-Room-Interior-design.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">VICTORIAN LIVING ROOM</h2>
+                        <p class="description">You can give your house a Victorian theme and make it look like a palace. It consists of ottomans, beautiful vases, lamps, and rugs with patterns.Your house will appear more wealthy, as a result.</p>
+                        <button class="button">View More</button>
+                    </div>
+                 </div>
+</div>
+
+          <!-- Additional Swiper slides would continue here -->
+
+          <!-- Swiper navigation elements -->
+          <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional sections with AOS animations -->
+  <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-in" data-aos-delay="500">Components that make your Living Room</h1>
+ 
+
+  <!-- More sections with AOS animations -->
+
+
+  <h3 style="text-align: center;font-size: 20px;font-weight: normal;" data-aos="fade-in" data-aos-delay="100">Every component designed and crafted carefully as per your requirements, we make sure your bedroom looks beautiful in every way.</h3>
+
+    <div class="div2" data-aos="fade-up" data-aos-delay="200">
+    	<div class="container">
+      <div class="slider-wrapper" data-aos="fade-left" data-aos-delay="300">
+        
+          
+        </button>
+        <ul class="image-list">
+        	 <div class="image-container"data-aos="zoom-in" data-aos-delay="500">
+          <img class="image-item" src="https://vivaninterio.com/wp-content/uploads/2020/05/HTB1LtrWXnjxK1Rjy0Fnq6yBaFXax.jpg" alt="img-1"/>
+           <div class="overlay1"><div class="overlay-text">Sofa</div></div>
+        </div>
+        	 <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://blog.society6.com/app/uploads/2019/01/Living-Room-Essentials-6.png" alt="img-2" /><div class="overlay1">
+            <div class="overlay-text">Curtains</div></div>
+        </div>
+        
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://blog.society6.com/app/uploads/2019/01/Living-Room-Essentials-8.jpg" alt="img-4" />
+          <div class="overlay1"><div class="overlay-text">Throw Pillows</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://media.designcafe.com/wp-content/uploads/2019/12/17054615/living-room-wall-units.jpg" alt="img-5" />
+          <div class="overlay1"><div class="overlay-text">Television</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://blog.society6.com/app/uploads/2019/01/Living-Room-Essentials-11.jpg" alt="img-6" />
+          <div class="overlay1"><div class="overlay-text">Table Lamps</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://skytouchceramic.com/uploads/pages/ezgif.com-webp-to-jpg%20(10).webp" alt="img-7" />
+          <div class="overlay1"><div class="overlay-text">Flooring</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://ikiru.in/cdn/shop/files/sGJ14rtslX24CmJP6tTOM4HTzYuzKlZcZwgnUU--Wh8.jpg?v=1697701142" alt="img-8" />
+          <div class="overlay1"><div class="overlay-text">Decoration</div></div>
+        </div>
+        
+        </ul>
+        
+            <!-- Content for next slide button -->
+       
+          
+        <div class="slider-scrollbar" data-aos="fade-in" data-aos-delay="500">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+    <script>
+        
+    </script>
+
+    <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-in" data-aos-delay="100">
+        Looking for customise sofa design?
+    </h1>
+    <h3 style="text-align: center; font-size: 20px; font-weight: normal;" data-aos="fade-in" data-aos-delay="200">
+        Do you want customise sofa design for your room on the best budget?
+    </h3>
+
+    <div class="div3" data-aos="fade-up" data-aos-delay="300">
+        <div class="div4" data-aos="fade-in" data-aos-delay="400">
+            <center>
+                <img src="https://www.wakefit.co/blog/wp-content/uploads/2022/01/Genuine-Leather-min.jpg" class="image1">
+            </center>
+            <div style="background-color: rgba(196,173,157,0.5); padding: 0 20px; border-radius: 25px; height: 250px;">
+                <h4 style="text-align: center; padding: 10px 20px;">Leather Sofa Sets</h4>
+                <div style="text-align: center; padding-bottom: 10px;">The genuine counterparts are visually different. These sofa set types are durable, rich, and can be seen in houses with luxury living room designs. These types of sofas absorb the spillage and are comfortable for a long time.</div>
+            </div>
+        </div>
+    	<div class="div4">
+    		<center><img src="https://d2dwxeidp9b9gl.cloudfront.net/images/products/1694084235462Yuvi%203%20Seater%20Wooden%20Sofa%20(Honey%20Finish).jpg" class="image1"><center>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px;height: 250px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Wooden Sofas</h4>
+    		<div style="text-align: center;padding-bottom: 10px;">Traditionally, in Indian houses, the wooden sofa styles are the dominating designs. That is, the frame and body are of wood, of course.</div>
+    	</div>
+    	</div>
+    	<div class="div4">
+    		<center><img src="https://www.wakefit.co/blog/wp-content/uploads/2022/01/Corner-Sofa-min.jpg" class="image1"><center>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px; height: 250px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Corner Sofa</h4>
+    		<div style="text-align: center;padding-bottom: 10px;">This way, you can use the rest of the space for legroom, coffee tables, or even unique statement pieces. Also, corner seats are great design ideas for the living space as it allows you to create a small reading corner with a bookrack just beside it.</div>
+    	</div>
+    	</div>
+    	<div class="div4">
+    		<center><img src="https://shop.gkwretail.com/cdn/shop/products/LShapeSofaSetReclinerCornerLeatherSofaSet_Grey.jpg?v=1643540654&width=1445" class="image1"><center>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px;height: 250px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Recliner Types of Sofa Sets</h4>
+    		<div style="text-align: center;padding-bottom: 10px;">There is nothing as comforting as home, and one of the most inviting parts of that is a recliner sofa. So, for a relaxing evening to unwind, the recliner comes to your rescue. </div>
+    	</div>
+    	</div>
+    </div>
+
+	</section>
+    <section class="section3">
+        
+        
+    </section>
+
+
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>About Us</h3>
+            <p>We create bespoke living spaces that seamlessly blend style, comfort, and functionality.</p>
+          </div>
+          <div class="col-md-3">
+            <h3>Useful Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3>Our Services</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Interior Design Consultation</a></li>
+              <li><a href="#">Custom Room Design</a></li>
+              <li><a href="#">Furniture Selection</a></li>
+              <li><a href="#">Color Scheme Coordination</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h3>Contact Us</h3>
+            <address>
+              <p><ion-icon name="location-outline"></ion-icon> Pune, India</p>
+              <p><ion-icon name="call-outline"></ion-icon> +919812345689</p>
+              <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:info@RoomCraft.com">info@RoomCraft.com</a></p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+	<script type="text/javascript">
+		var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });
+
+	const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+	</script>
+
+
+
+  <!-- AOS refresh on window load -->
+  <script>
+    window.addEventListener('load', () => {
+      AOS.refresh(); // Refresh AOS to ensure animations work smoothly after content is fully loaded
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.swiper', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          spaceBetween: 20,
+          loop: true, // Optional, if you want infinite loop
+        });
+      });
+      
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      AOS.refresh(); 
+    });
+  </script>
+
+
+ 
+
+</body>
+</html>
