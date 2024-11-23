@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Dimensions Form</title>
+<link rel="stylesheet" href="form.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+    
+
+
+<div id="dimensions-form">
+    <h1>Dimensions of Room</h1>
+    <img src="IMG/Room_Dimensions_rev02.jpg" length="100px" width="150px">
+    <label for="width">Width:</label>
+    <input type="range" id="width" name="width" min="0" max="50">
+    <input type="number" id="width-input" name="width_input" min="0" max="50"> <!-- Change name to width_input -->
+    <span id="width-value"> ft</span><br>
+    <label for="length">Length:</label>
+    <input type="range" id="length" name="length" min="0" max="50">
+    <input type="number" id="length-input" name="length_input" min="0" max="50"> <!-- Change name to length_input -->
+    <span id="length-value"> ft</span><br>
+    <button type="button" id="next-dimension-button1"><a href="form2.html" style="color: white;text-decoration: none;">Back</a></button>
+
+    <button type="button" id="next-dimension-button">Next</button>
+
+
+</div>
+
+<!-- Sofa selection section -->
+<div id="sofa-selection" style="display:none;">
+    <h2>Bedroom Room Requirements</h2>
+    <h3>1. Select Kitchen Type You Want</h3>
+    <div class="option">
+    <div class="sofa-option">
+        <label>
+            <img src="IMG/Straight Kitchen.jpeg" alt="King Size Bed">
+            <input type="radio" name="sofa-type" value='Straight Kitchen'> <!-- Change name to sofa_type -->
+            Straight Kitchen
+        </label>
+    </div>
+    <div class="sofa-option">
+        <label>
+            <img src="IMG/Parallel Kitchen.jpeg" alt="Queen Size Bed">
+            <input type="radio" name="sofa-type" value='Parallel Kitchen'> <!-- Change name to sofa_type -->
+            Parallel Kitchen
+        </label>
+    </div>
+    <div class="sofa-option">
+        <label>
+            <img src="IMG/L-Shape Kitchen.avif" alt="Full Size Bed">
+            <input type="radio" name="sofa-type" value='L-Shape Kitchen'> <!-- Change name to sofa_type -->
+            L-Shape Kitchen
+        </label>
+    </div>
+</div>
+    <button type="button" id="back-sofa-button">Back</button>
+    <button type="button" id="next-sofa-button">Next</button>
+</div>
+
+<!-- Furniture selection section -->
+<div id="furniture-selection" style="display:none;">
+    <h2>Platform Tops</h2>
+    <h3>2. Platform Tops</h3>
+    <div class="option">
+        <div class="furniture-option">
+            <label>
+                <img src="IMG/Granite Stone Top.jpeg" alt="Shoe Rack">
+                <input type="checkbox" name="living-area-furniture[]" value="Granite Stone Top"> <!-- Change name to living-area-furniture[] -->
+                Granite Stone Top
+            </label>
+        </div>
+        <div class="furniture-option">
+            <label>
+                <img src="IMG/Quartz Stone Top.webp" alt="Side Table">
+                <input type="checkbox" name="living-area-furniture[]" value="Quartz Stone Top"> <!-- Change name to living-area-furniture[] -->
+                Quartz Stone Top
+            </label>
+        </div>
+        <div class="furniture-option">
+            <label>
+                <img src="Design Your Interiors_files/005(1).png" alt="Center Table">
+                <input type="checkbox" name="living-area-furniture[]" value="Stainless Steel Top"> <!-- Change name to living-area-furniture[] -->
+                Stainless Steel Top
+            </label>
+        </div>
+        <div class="furniture-option">
+            <label>
+                <img src="IMG/Marble.jpeg" alt="TV Unit">
+                <input type="checkbox" name="living-area-furniture[]" value="Marble"> <!-- Change name to living-area-furniture[] -->
+                Marble
+            </label>
+        </div>
+    </div>
+    <button type="button" id="back-furniture-button">Back</button>
+    <button type="button" id="next-furniture-button">Next</button>
+</div>
+
+<!-- Lighting selection section -->
+<div id="lighting-selection" style="display:none;">
+    <h2>Units Choices</h2>
+    <h3>3. Units Choices</h3>
+    <div class="option">
+        <div class="lighting-option">
+            <label>
+                <img src="IMG/Overhead Units.jpeg" alt="Table Lamp">
+                <input type="checkbox" name="living-area-lighting[]" value="Overhead Units"> <!-- Change name to living-area-lighting[] -->
+                Overhead Units
+            </label>
+        </div>
+        <div class="lighting-option">
+            <label>
+                <img src="IMG/Loft Units.jpeg" alt="Floor Lamp">
+                <input type="checkbox" name="living-area-lighting[]" value="Loft Units"> <!-- Change name to living-area-lighting[] -->
+                Loft Units
+            </label>
+        </div>
+        <div class="lighting-option">
+            <label>
+                <img src="IMG/Drawer Pack.avif" alt="Ceiling Lighting">
+                <input type="checkbox" name="living-area-lighting[]" value="Drawer Pack"> <!-- Change name to living-area-lighting[] -->
+                Drawer Pack
+            </label>
+        </div>
+        <div class="lighting-option">
+            <label>
+                <img src="IMG/Corner Base.jpeg" alt="Chandelier">
+                <input type="checkbox" name="living-area-lighting[]" value="Corner Base"> <!-- Change name to living-area-lighting[] -->
+                Corner Base
+            </label>
+        </div>
+    </div>
+    <button type="button" id="back-lighting-button">Back</button>
+    <button type="button" id="next-lighting-button">Next</button>
+</div>
+
+
+
+
+<!-- Paint selection section -->
+<div id="paint-selection" style="display:none;">
+    <h2>Kitchen Requirements</h2>
+    <h3>4. Paint</h3>
+    <div class="paint-option">
+        <label>
+            <img src="IMG/bucket_1.png" length="20px" bredth="20px" alt="Tractor Emulsion Paint">
+            <input type="radio" name="paint-type" value="tractor-emulsion"> <!-- Change name to paint_type -->
+            Tractor Emulsion Paint
+        </label>
+    </div>
+    <div class="paint-option">
+        <label>
+            <img src="IMG/bucket_2.png" alt="Apcolite Advance Paint">
+            <input type="radio" name="paint-type" value="apcolite-advance"> <!-- Change name to paint_type -->
+            Apcolite Advance Paint
+        </label>
+    </div>
+    <div class="paint-option">
+        <label>
+            <img src="IMG/bucket_3.png" alt="Royale Paint">
+            <input type="radio" name="paint-type" value="royale"> <!-- Change name to paint_type -->
+            Royale Paint
+        </label>
+    </div>
+    <button type="button" id="back-paint-button">Back</button>
+    <button type="submit" id="submit-button">Submit</button>
+</div>
+
+<script src="kitchen.js"></script>
+
+</body>
+</html>

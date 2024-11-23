@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Elgraine+ExtraLight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-hP/XcMOqK52jIy3vg4Qr1wQhQ5ejUXm/EdyTq30/IK6B6OuS0fGc11PEgMeyZV+2A4+0i6TcvM1vRKOITpuSXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+    .curtain {
+      position: fixed;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #333;
+      z-index: 10000; /* High z-index to ensure visibility over other content */
+      transition: transform 2s ease-in-out; /* Transition duration for the animation */
+    }
+
+    .curtain-left {
+      left: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .curtain-right {
+      right: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .open-curtain-left {
+      transform: translateX(-100%); /* Final position for left curtain */
+    }
+
+    .open-curtain-right {
+      transform: translateX(100%); /* Final position for right curtain */
+    }
+
+    
+    .section1 {
+      position: relative;
+      height: 100vh; /* Set the height to the viewport height */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.thespruce.com/thmb/-DAaJ4cGiiDMyKGkW40TWHPo1d8=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-modern-kitchen-ideas-7110474-hero-e78cb87316b847fb87fe807ffd4a0921.jpg');
+      background-size: cover; /* Ensure the background image covers the entire section */
+      background-position: center; /* Center the background image */
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      color: white; /* Set text color to white */
+      text-align: center; /* Align text at the center */
+      padding: 0 50px; /* Add padding to prevent text from touching edges */
+    }
+
+    .heading1 {
+      font-size: 80px;
+      font-weight: normal;
+    }
+
+    .text {
+      margin-top: 100px; /* Adjust the value to move it further down */
+  }
+  </style>
+</head>
+<body>
+  <!-- Curtains that animate to open -->
+  <div class="curtain curtain-left" id="curtain-left"></div>
+  <div class="curtain curtain-right" id="curtain-right"></div>
+
+  <script>
+    // Open the curtains after a short delay
+    setTimeout(() => {
+      document.getElementById('curtain-left').classList.add('open-curtain-left');
+      document.getElementById('curtain-right').classList.add('open-curtain-right');
+    }, 500); // Delay in milliseconds to start the animation
+  </script>
+
+
+   <section id="home" class="home-section">
+    <div class="custom-background">
+        <div class="container-fluid px-0" style="background-color: transparent;">
+            <nav class="navbar navbar-expand-lg navbar-light px-0" style="background-color: transparent;">
+                <a class="navbar-brand text-white font-weight-bold" href="#home">RoomCraft</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#about">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Interiors
+                            </a>
+                            <div class="dropdown-menu active" aria-labelledby="navbarDropdown" style="z-index: 9999; color: #000; border-radius: 5px;">
+                                <a class="dropdown-item" href="/wt" style="color: #000;">Living Room</a>
+                                <a class="dropdown-item" href="/bedroom" style="color: #000;">Bedroom</a>
+                                <a class="dropdown-item" href="/kitchen1" style="color: #000;">Kitchen</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about_us.html">About Us</a>
+                        </li>
+                    </ul>&nbsp
+                    <!-- <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='signup.html'">Get Started</button> -->
+                    <!-- <a class="btn btn-outline-success my-2 my-sm-0" href="/login">Sign in</a> -->
+                </div>
+            </nav>
+
+            <div>
+                <div class="text">
+                    <h2>Design The Home <br> Of Your Dreams</h2>
+                    <p>At RoomCraft, we believe that your home should reflect your unique style and personality. Our interactive platform allows you to choose every detail, from color themes to floor materials, to create your perfect space.</p>
+                    <!-- <a class="btn btn-outline-success my-2 my-sm-0"  href="/login">Sign in</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="why-us-section">
+      <div class="container">
+          <h2 class="why-us-title">Why Us</h2>
+          <div class="why-us-points">
+              <div class="why-us-point">
+                  <i class="fas fa-paint-brush"></i>
+                  <h3>Customized Designs</h3>
+                  <p>We offer fully customizable designs tailored to your preferences, ensuring your home reflects your style.</p>
+              </div>
+              <div class="why-us-point">
+                  <i class="fas fa-palette"></i>
+                  <h3>Wide Range of Options</h3>
+                  <p>Choose from a wide selection of color themes, materials, and furniture options to suit your taste and budget.</p>
+              </div>
+              <div class="why-us-point">
+                  <i class="fas fa-laptop"></i>
+                  <h3>Easy-to-Use Platform</h3>
+                  <p>Our intuitive platform makes it easy to design your dream home with just a few clicks, saving you time and hassle.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+     <!-- ======================================== 
+          work completed counter section Start  
+    ========================================  -->
+
+    <section class="section-work-data section ">
+      <div class="container grid grid-four-col">
+        <div>
+          <h2 data-number="2000" class="counter-numbers">0+</h2>
+          <p>Projects completed</p>
+        </div>
+        <div>
+          <h2 data-number="6000" class="counter-numbers">0+</h2>
+          <p>Happy clients</p>
+        </div>
+        <div>
+          <h2 data-number="200" class="counter-numbers">0+</h2>
+          <p>International Awards</p>
+        </div>
+        <div>
+          <h2 data-number="800" class="counter-numbers">0+</h2>
+          <p>Skilled Architectures</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================== 
+          Our Testimonial Section Start  
+    ========================================  -->
+
+    <section class="section section-testimonial ">
+      <div class="container">
+        <br>
+        <h2 class="common-heading">What Our Customers Say </h2>
+      </div>
+        <!-- Slider main container -->
+        <!-- Swiper -->
+  <div class="swiper mySwiper container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>RoomCraft's team showed outstanding responsiveness, expertise, and dedication, ensuring a seamless experience from beginning to end.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img loading="lazy" src="static/images/clients/a.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Vikram thapa</p>
+            <p>Software Developer</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>RoomCraft went above and beyond to bring my vision to life. Their attention to detail and dedication to customer satisfaction are unmatched.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img loading="lazy" src="static/images/clients/b.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Neha Sharma</p>
+            <p>fashion influencer</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>Working with RoomCraft was an absolute pleasure. They listened to my needs, offered valuable insights, and delivered exceptional results.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img loading="lazy" src="static/images/clients/c.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Sonali Shaha</p>
+            <p>Actor</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>I am extremely impressed with RoomCraft's professionalism and expertise. They made the entire process seamless and enjoyable.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img loading="lazy" src="static/images/clients/d.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Ganesh Kulkarni</p>
+            <p>Financial Analyst</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>RoomCraft's creativity and attention to detail transformed my space into something truly special. I couldn't be happier with the outcome.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img src="static/images/clients/e.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Sneha Jadhav</p>
+            <p>Marketing Manager</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>From start to finish, RoomCraft exceeded my expectations. Their team was responsive, knowledgeable, and committed to delivering excellence.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img src="static/images/clients/f.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>John neol</p>
+            <p>Musician</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>Choosing RoomCraft was the best decision I made for my project. Their passion for design and commitment to quality are evident in every detail.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img src="static/images/clients/g.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Graylee Mae</p>
+            <p>Model</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+       <div class="swiper-slide">
+      
+        <div class="swiper-client-msg">
+          <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+        </div>
+        <div class="swiper-client-data grid grid-two-col ">
+          <figure>
+          <img src="static/images/clients/h.jpg" alt="">
+          </figure>
+          <div class="client-data-details">
+            <p>Nick</p>
+            <p>Entrepruner</p>
+          </div>
+        </div>
+      </div>
+      <!-- slide end  -->
+     
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+      </div>
+  </section>
+
+
+
+
+  <section>
+    <div style="background-color: white;padding: 25px 0;">
+    <h1 style="text-align: center;font-size: 20px;font-weight: normal;color: black;"><strong>We do it all in the world of interior design.</strong></h1><br>
+    <p style="text-align: center;font-size: 15px;font-weight: normal;color: black;">From complete HOME INTERIORS to MODULAR FURNITURE projects <br>Be it your Bedroom or Kitchen or your living room.
+    </p>
+  </div>
+  <br><br>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-height">
+                <img src="https://media.designcafe.com/wp-content/uploads/2020/03/21012613/luxury-living-room-designs.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Living Room</h5>
+                    <p class="card-text text-dark">Transform your living space into a haven of comfort and style.</p>
+                    <a href="/wt" class="btn btn-primary mt-auto" style="background-color: #fff; color: #000;border: 1px solid black;">View More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-height">
+                <img src="static/images/IMG/bedroom.jpeg" class="card-img-top" alt="Image 2">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Bedroom</h5>
+                    <p class="card-text text-dark">Create your dream bedroom sanctuary, where relaxation meets style.</p>
+                    <a href="/bedroom" class="btn btn-primary mt-auto" style="background-color: #fff; color: #000;border: 1px solid black;">View More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-height">
+                <img src="static/images/IMG/kitchen.jpeg" class="card-img-top" alt="Image 3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Kitchen</h5>
+                    <p class="card-text text-dark">Want to know more kitchen style?</p>
+                    <a href="/kitchen1" class="btn btn-primary mt-auto" style="background-color: #fff; color: #000;border: 1px solid black;">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  </section>
+  <br>
+
+   <!-- ======================================== 
+          Our footer Section   
+    ========================================  -->
+
+    <footer class="section-footer section text-light custom-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="f-about">
+                    <h3>About</h3>
+                    <p>At RoomCraft, our passion lies in crafting bespoke living spaces that seamlessly blend style, comfort, and functionality to reflect your unique personality and lifestyle.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="f-links">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="f-services">
+                    <h3>Services</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Interior Design Consultation</a></li>
+                        <li><a href="#">Customized Room Design</a></li>
+                        <li><a href="#">Furniture Selection</a></li>
+                        <li><a href="#">Color Scheme Coordination</a></li>
+                        <li><a href="#">Space Planning</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="f-address">
+                    <h3>Have a Questions?</h3>
+                    <address>
+                        <p><ion-icon name="location-outline"></ion-icon> Pune, India</p>
+                        <p><ion-icon name="call-outline"></ion-icon> <a href="#">+919812345689</a></p>
+                        <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:info@RoomCraft.com">info@RoomCraft.com</a></p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <!-- JAVASCRIPT LINKS  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="static/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+ <!-- JAVASCRIPT LINKS  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/static/script.js"></script>
+
+
+    <script>
+      window.addEventListener('load', () => {
+        AOS.refresh(); // Refresh AOS to ensure animations work smoothly after content is fully loaded
+      });
+    </script>
+
+    <script>
+      window.addEventListener('load', () => {
+        AOS.refresh(); 
+      });
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

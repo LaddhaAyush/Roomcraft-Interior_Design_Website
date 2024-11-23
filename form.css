@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bab6b6; /* Light pink background */
+    color: #333;
+    text-align: center;
+  }
+  #dimensions-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  input[type=range] {
+    width: 100%;
+  }
+  input[type=number] {
+    width: 60px;
+    margin-left: 10px;
+  }
+  span {
+    display: block;
+    margin-top: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 20px 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #555;
+  }
+
+/* Previous CSS styles */
+/* ... */
+.sofa-option {
+    display: inline-block;
+    margin: 20px;
+  }
+  .sofa-option img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Previous CSS styles */
+/* ... */
+#dimensions-form, #sofa-selection #paint-selection {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 50px; /* Circular borders */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #paint-selection {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 15px; /* Circular borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* Center the content */
+  }
+  
+  #paint-selection .paint-option {
+    display: inline-block; /* Align options horizontally */
+    margin: 10px; /* Space between options */
+    width: 30%; /* Width of each option */
+  }
+  
+  #paint-selection .paint-option img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Ensure the image is a block to allow for margin */
+    margin: 0 auto 10px; /* Center image and add space below */
+  }
+  
+  #paint-selection .button-container {
+    margin-top: 20px;
+  }
+  
+  #paint-selection .button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #paint-selection .button-container button:hover {
+    background-color: #555;
+  }
+  
+
+
+
+
+#furniture-selection {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 15px; /* Circular borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* Center the content */
+}
+
+#furniture-selection .furniture-option {
+    display: inline-block; /* Align options horizontally */
+    margin: 10px; /* Space between options */
+    width: 30%; /* Width of each option */
+    vertical-align: top; /* Align options from the top */
+}
+
+#furniture-selection .furniture-option label {
+    display: block;
+    text-align: center; /* Center the text */
+}
+
+#furniture-selection .furniture-option label img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    display: block; /* Ensure the image is a block to allow for margin */
+    margin: 0 auto 10px; /* Center image and add space below */
+}
+
+#furniture-selection .furniture-option input[type="checkbox"] {
+    display: block;
+    margin: 0 auto; /* Center the checkbox */
+}
+
+#furniture-selection .button-container {
+    margin-top: 20px;
+}
+
+#furniture-selection .button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#furniture-selection .button-container button:hover {
+    background-color: #555;
+}
+
+#lighting-selection {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 15px; /* Circular borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* Center the content */
+}
+
+#lighting-selection .lighting-option {
+    display: inline-block; /* Align options horizontally */
+    margin: 10px; /* Space between options */
+    width: 30%; /* Width of each option */
+    vertical-align: top; /* Align options from the top */
+}
+
+#lighting-selection .lighting-option label {
+    display: block;
+    text-align: center; /* Center the text */
+}
+
+#lighting-selection .lighting-option label img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    display: block; /* Ensure the image is a block to allow for margin */
+    margin: 0 auto 10px; /* Center image and add space below */
+}
+
+#lighting-selection .lighting-option input[type="checkbox"] {
+    display: block;
+    margin: 0 auto; /* Center the checkbox */
+}
+
+#lighting-selection .button-container {
+    margin-top: 20px;
+}
+
+#lighting-selection .button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#lighting-selection .button-container button:hover {
+    background-color: #555;
+}
+
+
+
+.option{
+  display: block;
+}
+  
+  
+  

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="wt.css">
+  <title>Luxury Spaces</title>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <style>
+    .curtain {
+      position: fixed;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #333;
+      z-index: 1000; /* High z-index to ensure visibility over other content */
+      transition: transform 2s ease-in-out; /* Transition duration for the animation */
+    }
+
+    .curtain-left {
+      left: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .curtain-right {
+      right: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .open-curtain-left {
+      transform: translateX(-100%); /* Final position for left curtain */
+    }
+
+    .open-curtain-right {
+      transform: translateX(100%); /* Final position for right curtain */
+    }
+
+    
+    .section1 {
+      position: relative;
+      height: 100vh; /* Set the height to the viewport height */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.thespruce.com/thmb/-DAaJ4cGiiDMyKGkW40TWHPo1d8=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-modern-kitchen-ideas-7110474-hero-e78cb87316b847fb87fe807ffd4a0921.jpg');
+      background-size: cover; /* Ensure the background image covers the entire section */
+      background-position: center; /* Center the background image */
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      color: white; /* Set text color to white */
+      text-align: center; /* Align text at the center */
+      padding: 0 50px; /* Add padding to prevent text from touching edges */
+    }
+
+    .heading1 {
+      font-size: 80px;
+      font-weight: normal;
+    }
+
+  </style>
+
+
+
+</head>
+<body>
+
+    <div class="curtain curtain-left" id="curtain-left"></div>
+  <div class="curtain curtain-right" id="curtain-right"></div>
+
+  <script>
+    // Open the curtains after a short delay
+    setTimeout(() => {
+      document.getElementById('curtain-left').classList.add('open-curtain-left');
+      document.getElementById('curtain-right').classList.add('open-curtain-right');
+    }, 500); // Delay in milliseconds to start the animation
+  </script>
+
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({ duration: 1200, easing: 'ease-in-out' });
+  </script>
+
+  <!-- Section 1 with AOS animation -->
+  <section class="section1" data-aos="fade-in">
+    <h1 class="heading1">Modular Kitchens As per your taste</h1>
+   
+  </section>
+
+  <!-- Section 2 with multiple AOS animations -->
+  <section class="section2">
+    <div class="div1" data-aos="fade-up">
+      <p>Glimpse around the corner and uncover the subtle details that elevate RoomCraft to a new level of luxurious living.</p>
+    </div>
+
+    <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-up">Trending</h1>
+    
+    <!-- Gallery section with AOS animations -->
+    <div class="container" data-aos="fade-right">
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--1" data-aos="zoom-in">
+            <img src="https://www.shutterstock.com/shutterstock/videos/1092718571/thumb/7.jpg?ip=x480" alt="Gallery image 1" class="gallery__img">
+            <div class="overlay1">
+              <div class="overlay-text">Industrial interior style</div>
+            </div>
+          </figure>
+  
+          <figure class="gallery__item gallery__item--2" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://wallpapers.com/images/hd/4k-kitchen-background-3840-x-2160-0x64e8il5ed5wxru.jpg" alt="Gallery image 2" class="gallery__img">
+            <div class="overlay1">
+              <div class="overlay-text">Mid-century modern interior style</div>
+            </div>
+          </figure>
+  
+          <!-- Correcting nested divs for figure 3 -->
+          <figure class="gallery__item gallery__item--3" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://images4.alphacoders.com/760/760846.jpg" alt="Gallery image 3" class="gallery__img">
+            <div class="overlay1">
+              <div class="overlay-text">Funky retro interior style</div>
+            </div>
+          </figure>
+  
+          <!-- Correcting indentation for other figures -->
+          <figure class="gallery__item gallery__item--4" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://i.pinimg.com/originals/9f/9c/3e/9f9c3e66c5c9dc6c989bd4d12775a23e.png" alt="Gallery image 4" class="gallery__img">
+            <div class="overlay1">
+              <div class="overlay-text">Urban interior style</div>
+            </div>
+          </figure>
+  
+          <figure class="gallery__item gallery__item--5" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://static.showit.co/1200/_9EtrtW5TI2SWDZeWi_Q7Q/shared/dsc_0051.jpg" alt="Gallery image 5" class="gallery__img">
+            <div class="overlay1">
+              <div class="overlay-text">Modern minimalist interior style</div>
+            </div>
+          </figure>
+  
+          <figure class="gallery__item gallery__item--6" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://static.showit.co/1200/QCS_XzskQUaBdqKwFVKDTw/177191/homestead_kitchen_3.jpg" alt="Gallery image 6" class="gallery__img">
+            <div class="overlay1">
+              <div class="overlay-text">Modern contemporary interior style</div>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+
+    <!-- Swiper section with AOS animations -->
+       
+    <h1 style="text-align: center;font-size: 50px;font-weight: normal;">Explore your  kitchen types</h1>
+
+    <div class="div1">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://media.designcafe.com/wp-content/uploads/2019/12/17055400/island-modular-kitchen-design-1024x1024.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Island Modular Kitchen</h2>
+                        <p class="description">Spread out over the entire kitchen area; an island-shaped kitchen accommodates all functionalities in a sophisticated manner.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://media.designcafe.com/wp-content/uploads/2019/12/17055359/parallel-modular-kitchen-design.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Parallel Modular Kitchen</h2>
+                        <p class="description">With the advent of parallel modular kitchen designs, your kitchens need not be a claustrophobic hidden room.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://media.designcafe.com/wp-content/uploads/2020/08/22183721/straight-layout-kitchen-design-1024x1024.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Straight Modular Kitchen</h2>
+                        <p class="description">Classy and old fashioned! But that is what makes straight modular kitchens so convenient and easy to use. This kitchen shape ensures enough space for all your accessories and functional elements. This layout sticks to basics and is a must-have for those who like minimalistic decor, cook and dine hassle-free.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://media.designcafe.com/wp-content/uploads/2019/12/17055358/l-shaped-modular-kitchen-1024x1024.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">L Shaped Modular Kitchen</h2>
+                        <p class="description">This shape works best for small to medium kitchen spaces. To design an L-Shape modular kitchen, one needs thoughtful planning to keep it clutter-free and organized. Creativity amplifies in an L-Shaped modular kitchen. The L-Shaped kitchen is ergonomically appropriate and facilitates a sensible work triangle for preparation, cooking, and cleaning.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://media.designcafe.com/wp-content/uploads/2019/12/17055357/u-shaped-modular-kitchen-design-1024x1024.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">U Shaped Modular Kitchen</h2>
+                        <p class="description">A U-Shaped modular design features three walls and are lined with cabinets and appliances. This type of kitchen is an efficient design that frees up floor space. It is the most practical kitchen layout and provides a lot of space for storage and appliances compared to a U-shaped modular kitchen. </p>
+                        <button class="button">View More</button>
+                    </div>
+                 </div>
+</div>
+
+          <!-- Additional Swiper slides would continue here -->
+
+          <!-- Swiper navigation elements -->
+          <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional sections with AOS animations -->
+  <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-in" data-aos-delay="500">Components that make your Kitchen</h1>
+  <h3 style="text-align: center; font-size: 20px; font-weight: normal;" data-aos="fade-in" data-aos-delay="600">Every component designed and crafted carefully as per your requirements.</h3>
+
+  <!-- More sections with AOS animations -->
+
+
+  <h3 style="text-align: center;font-size: 20px;font-weight: normal;" data-aos="fade-in" data-aos-delay="100">Every component designed and crafted carefully as per your requirements, we make sure your kitchen looks beautiful in every way.</h3>
+
+    <div class="div2" data-aos="fade-up" data-aos-delay="200">
+    	<div class="container">
+      <div class="slider-wrapper" data-aos="fade-left" data-aos-delay="300">
+      
+        <ul class="image-list">
+        	 <div class="image-container"data-aos="zoom-in" data-aos-delay="500">
+          <img class="image-item" src="https://m.media-amazon.com/images/I/51L4sS+OeVL.AC_UF1000,1000_QL80.jpg" alt="img-1"/>
+           <div class="overlay1"><div class="overlay-text">Sink</div></div>
+        </div>
+        	 <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://dam.thdstatic.com/content/production/bd6jJY4Y2DuirBt7k6dHEg/I4--iIruy0e3gpMpvLKbPw/optimizedFile/219a775d-8ca3-476d-a8c4-54b2db37eee8_C9086GB-CHR_Life2_2000x2000px.jpeg?im=Crop,rect=(9.571739783653847,552.5841275728666,1410.5506122295674,881.5941326434796);Resize=(920,575)" alt="img-2" /><div class="overlay1"><div class="overlay-text">Counter top</div></div>
+        </div>
+        	<div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://www.whirlpool.com/is/image/content/dam/business-unit/whirlpoolv2/en-us/marketing-content/site-assets/page-content/oc-articles/types-of-refrigerators/types-of-refrigerators_Thumbnail.jpg?wid=1200&fmt=webp" alt="img-3" />
+          <div class="overlay1"><div class="overlay-text">Refrigarator</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://images.homify.com/image/upload/c_scale,h_500,w_500/v1440285275/p/photo/image/595259/cocina_foil_ebano_vetra_rojo2.jpg" alt="img-4" />
+          <div class="overlay1"><div class="overlay-text">Appliances</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://media.designcafe.com/wp-content/uploads/2023/05/26230854/types-of-kitchen-wall-cabinets.jpg" alt="img-5" />
+          <div class="overlay1"><div class="overlay-text">Cabinets</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://assets.architecturaldigest.in/photos/6008396fe6e1f64740188fa9/master/w_1600%2Cc_limit/AFTER-LLI-Design-Victorian-Townhouse-Highgate-kitchen-larder-detail.jpg" alt="img-6" />
+          <div class="overlay1"><div class="overlay-text">Storage</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/7/14/0/Joel-Kelly-Design_Chevron-Kitchen_3.jpg.rend.hgtvcom.1280.1600.suffix/1436883894399.jpeg" alt="img-7" />
+          <div class="overlay1"><div class="overlay-text">Flooring</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://imgmedia.lbb.in/media/2023/10/651c044b94ab6848b09dd43b_1696334923847.jpg" alt="img-8" />
+          <div class="overlay1"><div class="overlay-text">Lighting</div></div>
+        </div>
+        
+        </ul>
+      
+          
+        <div class="slider-scrollbar" data-aos="fade-in" data-aos-delay="500">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+    <script>
+        
+    </script>
+
+    <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-in" data-aos-delay="100">
+       Customise your kitchen
+    </h1>
+    <h3 style="text-align: center; font-size: 20px; font-weight: normal;" data-aos="fade-in" data-aos-delay="200">
+        Your kitchen customization comes with a variety of choices, make one as per your needs and budget requirement.
+    </h3>
+
+    <div class="div3" data-aos="fade-up" data-aos-delay="300">
+        <div class="div4" data-aos="fade-in" data-aos-delay="400">
+            <center>
+                <img src="https://taylorcraftdoor.com/wp-content/uploads/cs101-group-0053-4S-101-Shaker-web-gray.jpg" class="image1">
+            </center>
+            <div style="background-color: rgba(196,173,157,0.5); padding: 0 20px; border-radius: 25px; height: 50px;">
+                <h4 style="text-align: center; padding: 10px 20px;">Cabinets & Materials</h4>
+               
+            </div>
+        </div>
+    	<div class="div4">
+    		<center><img src="https://image.made-in-china.com/2f0j00hyPWkJNclHqa/Modular-Design-Blind-Corner-Type-Soft-Closing-Kitchen-Accessory-Built-Racks-Wire-Storage-Pull-out-Magic-Furniture-Hardware-Corner-Basket-Dish-Drying-Rack.jpg" class="image1"><center>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px;height: 50px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Hardwares and organisers</h4>
+    		
+    	</div>
+    	</div>
+    	<div class="div4">
+    		<center><img src="https://img.staticmb.com/mbcontent/images/uploads/2022/7/Porcelain-white-kitchen-countertops.jpg" class="image1"><center>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px; height: 50px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Platform Tops and Backsplash</h4>
+    		
+    	</div>
+    	</div>
+    	<div class="div4">
+    		<center><img src="https://img.staticmb.com/mbcontent/images/uploads/2023/11/modern-kitchen-appliances1.jpg" class="image1"><center>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px;height: 50px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Appliances</h4>
+    		
+    	</div>
+    	</div>
+    </div>
+
+	</section>
+    <section class="section3">
+        
+        
+    </section>
+
+
+	<script type="text/javascript">
+		var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });
+
+	const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+	</script>
+
+
+
+  <!-- AOS refresh on window load -->
+  <script>
+    window.addEventListener('load', () => {
+      AOS.refresh(); // Refresh AOS to ensure animations work smoothly after content is fully loaded
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.swiper', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          spaceBetween: 20,
+          loop: true, // Optional, if you want infinite loop
+        });
+      });
+      
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      AOS.refresh(); 
+    });
+  </script>
+
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Dimensions Form</title>
+<!-- Link to your CSS file -->
+<link rel="stylesheet" href="form2.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	
+<div id="room-selection" style="">
+    <h2>Select Room</h2>
+    <h3>Choose the room you want to furnish:</h3>
+    <div class="option">
+        <div class="room-option">
+            <label>
+                <img src="IMG/living-room.jpeg" alt="Living Room">
+                <input type="radio" name="room-type" value="living-room"> <!-- Change name to room_type -->
+                Living Room
+            </label>
+        </div>
+        <div class="room-option">
+            <label>
+                <img src="https://www.thespruce.com/thmb/S1aye-s9z6VRA58-V8oRLSQwKCc=/5100x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-luxury-kitchens-5211364-hero-688d716970544978bc12abdf17ce6f83.jpg" alt="Kitchen">
+                <input type="radio" name="room-type" value="kitchen"> <!-- Change name to room_type -->
+                Kitchen
+            </label>
+        </div>
+        <div class="room-option">
+            <label>
+                <img src="IMG/bedroom.webp" alt="Bedroom">
+                <input type="radio" name="room-type" value="bedroom"> <!-- Change name to room_type -->
+                Bedroom
+            </label>
+        </div>
+    </div>
+    <button type="button" id="next-dimension-button1"><a href="index.html" style="color: white;text-decoration: none;">Back</a></button>
+    
+    <button type="button" id="next-room-button">Next</button>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#next-room-button").click(function(){
+        $("#room-selection").show();
+    });
+
+    $("#back-room-button").click(function(){
+        $("#room-selection").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#next-room-button").click(function(){
+        var selectedRoom = $("input[name='room-type']:checked").val();
+        if (selectedRoom === "living-room") {
+            window.location.href = "Form.html";
+        } else if (selectedRoom === "bedroom") {
+            window.location.href = "bedroom_form.html";
+        } else{
+        	window.location.href = "kitchen_form.html";
+
+        }
+    });
+});
+</script>
+
+</body>
+</html>

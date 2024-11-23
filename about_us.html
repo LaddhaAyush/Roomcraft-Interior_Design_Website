@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about_us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style media="screen">
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Exo;
+        }
+        @font-face {
+          font-family: Exo;
+          src: url(./fonts/Exo2.0-Medium.otf);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 80px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 50px;
+        }
+        .main{
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #ededed;
+        }
+        .profile-card{
+          position: relative;
+          font-family: sans-serif;
+          width: 220px;
+          height: 220px;
+          background: #fff;
+          padding: 30px;
+          border-radius: 50%;
+          box-shadow: 0 0 22px #3336;
+          transition: .6s;
+          margin: 0 25px;
+        }
+        .profile-card:hover{
+          border-radius: 10px;
+          height: 260px;
+        }
+        .profile-card .img{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: .6s;
+          z-index: 99;
+        }
+        .profile-card:hover .img{
+          transform: translateY(-60px);
+        }
+        .img img{
+          width: 100%;
+          border-radius: 50%;
+          box-shadow: 0 0 22px #3336;
+          transition: .6s;
+        }
+        .profile-card:hover img{
+          border-radius: 10px;
+        }
+        .caption{
+          text-align: center;
+          transform: translateY(-80px);
+          opacity: 0;
+          transition: .6s;
+        }
+        .profile-card:hover .caption{
+          opacity: 1;
+        }
+        .caption h3{
+          font-size: 21px;
+          font-family: sans-serif;
+        }
+        .caption p{
+          font-size: 15px;
+          color: #0c52a1;
+          font-family: sans-serif;
+          margin: 2px 0 9px 0;
+        }
+        .caption .social-links a{
+          color: #333;
+          margin-right: 15px;
+          font-size: 21px;
+          transition: .6s;
+        }
+        .social-links a:hover{
+          color: #0c52a1;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbXxlbnwwfDF8MHx8fDA%3D" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="about-text">
+                        <h2>About Us</h2>
+                        <p>We offer residential interior design and decorating services specializing in kitchen, bathroom, interior designs and renovations. Our design approach and philosophy are to create a personal experience with each client. We take care of you not just during the design process, but help you to navigate throughout your renovation.
+
+                            Our mission is to help you design the home of your dreams! Guiding you through the design process to understand your specific functionality, needs, aesthetic and the overall vision of your dream home. We want to make sure that you feel well taken care of during the entire design process. </p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our team section -->
+    <div class="container">
+        <h1>Our Team</h1> <!-- Moved the heading inside a container for better alignment -->
+    </div>
+    <div class="main">
+        <div class="profile-card">
+            <div class="img">
+                <img src="team/Screenshot 2024-10-21 201721.png">
+            </div>
+            <div class="caption">
+                <h3>Shreya Bambal</h3>
+                <p>Roll no - 23</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="team/Screenshot 2024-10-21 203127.png">
+            </div>
+            <div class="caption">
+                <h3>Ayush Laddha</h3>
+                <p>Roll no - 16</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="team/Screenshot 2024-10-21 201910.png">
+            </div>
+            <div class="caption">
+                <h3>Atharva Bonde</h3>
+                <p>Roll no - 37</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg">
+            </div>
+            <div class="caption">
+                <h3>Prasanna Atram</h3>
+                <p>Roll no - 14</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

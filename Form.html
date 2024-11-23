@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Dimensions Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="/submitLivingRoom" method="POST">
+        <!-- Width -->
+        <div id="dimensions-form">
+            <h1>Dimensions of Room</h1>
+            <img src="IMG/Room_Dimensions_rev02.jpg" length="100px" width="150px">
+            <label for="width">Width:</label>
+            <input type="range" id="width" name="width" min="0" max="50">
+            <input type="number" id="width-input" name="width_input" min="0" max="50">
+            <span id="width-value"> ft</span><br>
+            <label for="length">Length:</label>
+            <input type="range" id="length" name="length" min="0" max="50">
+            <input type="number" id="length-input" name="length_input" min="0" max="50">
+            <span id="length-value"> ft</span><br>
+            <button type="button" id="next-dimension-button1"><a href="form2.html" style="color: white;text-decoration: none;">Back</a></button>
+            <button type="button" id="next-dimension-button" onclick="showNext('sofa-selection')">Next</button>
+        </div>
+        <!-- Sofa selection section-->
+        <div id="sofa-selection" style="display:none;">
+            <h2>Living Room Requirements</h2>
+            <h3>1. Select Sofa Type You Want</h3>
+            <label for="sofaType"></label>
+            <div class="option">
+                <div class="sofa-option">
+                    <label>
+                        <img src="IMG/Corner.png" alt="King Size Bed" />
+                        <input type="radio" name="sofaType" value="corner-sofa" />
+                        Corner Sofa
+                    </label>
+                </div>
+                <div class="sofa-option">
+                    <label>
+                        <img src="IMG/3_1_1.png" alt="Queen Size Bed" />
+                        <input type="radio" name="sofaType" value="3-1-1-sofa" />
+                        3:1:1 Sofa
+                    </label>
+                </div>
+                <div class="sofa-option">
+                    <label>
+                        <img src="IMG/3_2_1.png" alt="Full Size Bed" />
+                        <input type="radio" name="sofaType" value="3-2-1-sofa" />
+                        3:2:1 Sofa
+                    </label>
+                </div>
+            </div>
+            <button type="button" onclick="showPrev('dimensions-form')">
+                Back
+            </button>
+            <button type="button" id="next-sofa-button" onclick="showNext('furniture-selection')">
+                Next
+            </button>
+        </div> 
+
+        <!-- Furniture -->
+        <div id="furniture-selection" style="display:none;">
+            <h2>Living Area Furniture</h2>
+            <h3>2. Other furniture needed in your Living Area</h3>
+            <label for="furniture">Choose Furniture:</label><br />
+            <div class="option">
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/016.png" alt="Shoe Rack" />
+                        <input type="checkbox" name="furniture" value="shoe-rack" />
+                        Shoe Rack
+                    </label>
+                </div>
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/side_table.png" alt="Side Table" />
+                        <input type="checkbox" name="furniture" value="side-table" />
+                        Side Table
+                    </label>
+                </div>
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/seater.png" alt="Center Table" />
+                        <input type="checkbox" name="furniture" value="center-table" />
+                        Center Table
+                    </label>
+                </div>
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/icons8-tv-show-80.png" alt="TV Unit" />
+                        <input type="checkbox" name="furniture" value="tv-unit" />
+                        TV Unit
+                    </label>
+                </div>
+            </div>
+            <button type="button" onclick="showPrev('sofa-selection')">Back</button>
+            <button type="button" id="next-furniture-button" onclick="showNext('lighting-selection')">
+                Next
+            </button>
+        </div>
+
+        <!-- Lighting selection section -->
+        <div id="lighting-selection" style="display:none;">
+            <h2>Lighting Options</h2>
+            <h3>3. Select Types of Lighting for your Living Area</h3>
+            <label for="lighting">Choose Flooring:</label><br/>
+            <div class="option">
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/table-lamp-mdaLawD-600.jpeg" alt="Table Lamp" />
+                        <input type="checkbox" name="lighting" value="table-lamp" />
+                        Table Lamp
+                    </label>
+                </div>
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/modern-floor-lamp-G9ym8QB-600.jpeg" alt="Floor Lamp" />
+                        <input type="checkbox" name="lighting" value="floor-lamp" />
+                        Floor Lamp
+                    </label>
+                </div>
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/icons8-lights-80(3).png" alt="Ceiling Lighting" />
+                        <input type="checkbox" name="lighting" value="ceiling-lighting" />
+                        Ceiling Lighting
+                    </label>
+                </div>
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/icons8-chandelier-240(2).png" alt="Chandelier" />
+                        <input type="checkbox" name="lighting" value="pendant-lighting" />
+                        Chandelier
+                    </label>
+                </div>
+            </div>
+            <button type="button" onclick="showPrev('furniture-selection')">
+                Back
+            </button>
+            <button type="button" id="next-lighting-button" onclick="showNext('paint-selection')">
+                Next
+            </button>
+        </div>
+
+        <!-- Wall Paint -->
+        <div id="paint-selection" style="display: none">
+            <h2>Kitchen Requirements</h2>
+            <h3>4. Paint</h3>
+            <label for="paint">Choose Wall Paint:</label>
+            <input type="color" name="paint" id="paint" required />
+            <button type="button" onclick="showPrev('lighting-selection')">
+                Back
+            </button>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+    <script src="form.js"></script>
+</body>
+
+</html>

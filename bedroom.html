@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="static/wt.css">
+  <title>Luxury Spaces</title>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <style>
+    .curtain {
+      position: fixed;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #333;
+      z-index: 1000; /* High z-index to ensure visibility over other content */
+      transition: transform 2s ease-in-out; /* Transition duration for the animation */
+    }
+
+    .curtain-left {
+      left: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .curtain-right {
+      right: 0;
+      transform: translateX(0); /* Initial position */
+    }
+
+    .open-curtain-left {
+      transform: translateX(-100%); /* Final position for left curtain */
+    }
+
+    .open-curtain-right {
+      transform: translateX(100%); /* Final position for right curtain */
+    }
+    .section1 {
+      position: relative;
+      height: 100vh; /* Set the height to the viewport height */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.decorilla.com/online-decorating/wp-content/uploads/2023/08/Master-bedroom-inspiration-for-a-luxurious-interior-design.jpg');
+      background-size: cover; /* Ensure the background image covers the entire section */
+      background-position: center; /* Center the background image */
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      color: white; /* Set text color to white */
+      text-align: center; /* Align text at the center */
+      padding: 0 50px; /* Add padding to prevent text from touching edges */
+    }
+
+    .heading1 {
+      font-size: 80px;
+      font-weight: normal;
+    }
+
+    .custom-footer {
+        background-color: #18242c; /* Replace 'your-color' with your desired color code */
+        color: white;
+    }
+.col-md-3 a{
+    color: white;
+}
+.section-footer{
+    padding: 40px;
+}
+
+  </style>
+
+
+
+</head>
+<body>
+
+    <div class="curtain curtain-left" id="curtain-left"></div>
+  <div class="curtain curtain-right" id="curtain-right"></div>
+
+  <script>
+    // Open the curtains after a short delay
+    setTimeout(() => {
+      document.getElementById('curtain-left').classList.add('open-curtain-left');
+      document.getElementById('curtain-right').classList.add('open-curtain-right');
+    }, 500); // Delay in milliseconds to start the animation
+  </script>
+
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({ duration: 1200, easing: 'ease-in-out' });
+  </script>
+
+  <!-- Bootstrap Navbar -->
+  
+
+  <!-- Section 1 with AOS animation -->
+  <center>
+  <section class="section1" data-aos="fade-in">
+    <h1 class="heading1">Bedroom Design As Per Your Comfort</h1>
+    <h1 class="heading2"></h1>
+    <button id="getStartedButton" style="position: absolute;top: 460px;font-size: 25px;background-color: white;padding: 15px 30px;border-radius: 8px;border: none;font-weight: 200;">Get Started</button>
+  </section>
+</center>
+
+  <!-- Section 2 with multiple AOS animations -->
+  <section class="section2">
+    <div class="div1" data-aos="fade-up">
+      <p>Glimpse around the corner and uncover the subtle details that elevate RoomCraft to a new level of luxurious living.</p>
+
+    </div>
+
+    <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-up">Trending</h1>
+
+    <!-- Gallery section with AOS animations -->
+    <div class="container" data-aos="fade-right">
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1" data-aos="zoom-in">
+          <img src="https://media.designcafe.com/wp-content/uploads/2022/01/15190802/trending-bedroom-design-for-your-home.jpg" alt="Gallery image 1" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Industrial interior style</div>
+          </div>
+        </figure>
+
+        <figure class="gallery__item gallery__item--2" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://images.woodenstreet.de/image/data/juhi/blog%20images/21%20September%202022/bedroom-design-trends-2022-1.jpg" alt="Gallery image 2" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Mid-century modern interior style</div>
+          </div>
+        </figure>
+
+        <!-- Correcting nested divs for figure 3 -->
+        <figure class="gallery__item gallery__item--3" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://bonito.in/wp-content/uploads/2021/11/Blog-Detail-02-1.jpg" alt="Gallery image 3" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Funky retro interior style</div>
+          </div>
+        </figure>
+
+        <!-- Correcting indentation for other figures -->
+        <figure class="gallery__item gallery__item--4" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://cdn.decorilla.com/images/1200/927b3efb-3fd6-435c-9ded-983e4b533091/Classy-Tranquil-Bedroom-Interior-Design.jpeg?cv=1" alt="Gallery image 4" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Urban interior style</div>
+          </div>
+        </figure>
+
+        <figure class="gallery__item gallery__item--5" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://housing.com/news/wp-content/uploads/2022/11/image2-77.jpg" alt="Gallery image 5" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Modern minimalist interior style</div>
+          </div>
+        </figure>
+
+        <figure class="gallery__item gallery__item--6" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://w0.peakpx.com/wallpaper/842/13/HD-wallpaper-luxury-bedroom-interior-classic-bedroom-violet-bedroom-bedroom-design.jpg" alt="Gallery image 6" class="gallery__img">
+          <div class="overlay1">
+            <div class="overlay-text">Modern contemporary interior style</div>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+
+
+    
+    <h1 style="text-align: center;font-size: 50px;font-weight: normal;">Explore your  Bedroom types</h1>
+
+    <div class="div1">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://www.oppeinhome.com/upload/images/ueditor/20230619/best-master-bedroom-ideas-for-your-home-2.webp" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Master Bedroom</h2>
+                        <p class="description">A principal bedroom in your house, usually the largest for the head of family. A place you can go to seek the rest and relaxation you deserve.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://media.designcafe.com/wp-content/uploads/2020/05/17164155/kids-bedroom-design-in-modern-eclectic-style-with-bunk-beds.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Kid's Bedroom</h2>
+                        <p class="description">Children's bedroom serving multiple purpose - studyroom, playroom and most important a place of comfort and safety.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/56f2595e8a65e2db95a7d983/1520933705011-JOHBD4BK15G936JR165I/Designing+Your+Ageing+Parents%27+Room+%285%29.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Senior parent's Bedroom</h2>
+                        <p class="description">A bedroom for elderly aging parents, bright colours, soft corners, free movement, tall furnitures.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://elledecor.in/wp-content/uploads/2022/03/H6_KIDS-ROOM.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Youngster's Bedroom</h2>
+                        <p class="description">A teenager's bedroom requires more than just a sleeping space, its a room to explore thier independence, study space and lounge with friends space.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://www.thespruce.com/thmb/mNZ0UNKepnxAu42oWJSydeyE-Vs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/babbfarmlife_69700686_158467471933075_48487975295546935_n-d326d7d3551b475abb07a6a5bb32e8e9.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Guest's Bedroom</h2>
+                        <p class="description">A multi-purpose room for your guests, gives you an opportunity to host friends and family any time. Or make it your office room.</p>
+                        <button class="button">View More</button>
+                    </div>
+                 </div>
+</div>
+
+          <!-- Additional Swiper slides would continue here -->
+
+          <!-- Swiper navigation elements -->
+          <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional sections with AOS animations -->
+  <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-in" data-aos-delay="500">Components that make your Bedroom</h1>
+  <h3 style="text-align: center; font-size: 20px; font-weight: normal;" data-aos="fade-in" data-aos-delay="600">Every component designed and crafted carefully as per your requirements.</h3>
+
+  <!-- More sections with AOS animations -->
+
+
+  <h3 style="text-align: center;font-size: 20px;font-weight: normal;" data-aos="fade-in" data-aos-delay="100">Every component designed and crafted carefully as per your requirements, we make sure your bedroom looks beautiful in every way.</h3>
+
+    <div class="div2" data-aos="fade-up" data-aos-delay="200">
+    	<div class="container">
+      <div class="slider-wrapper" data-aos="fade-left" data-aos-delay="300">
+        
+          
+        </button>
+        <ul class="image-list">
+        	 <div class="image-container"data-aos="zoom-in" data-aos-delay="500">
+          <img class="image-item" src="https://www.yankodesign.com/images/design_news/2020/11/auto-draft/01-hariana_bed_yankodesign.jpg" alt="img-1"/>
+           <div class="overlay1"><div class="overlay-text">Beds</div></div>
+        </div>
+        	 <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://media.designcafe.com/wp-content/uploads/2020/04/11162401/floor-to-ceiling-wardrobe-design-with-glass-shutters.jpg" alt="img-2" /><div class="overlay1">
+            <div class="overlay-text">Wardrobes and Lofts</div></div>
+        </div>
+        
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://cdn.shopify.com/s/files/1/2432/5047/files/interior-design-of-neutral-living-room-with-stylish-retro-commode-up-picture-id1325871129_1024x1024.jpg?v=1633890606" alt="img-4" />
+          <div class="overlay1"><div class="overlay-text">Other Furnitures</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://images.squarespace-cdn.com/content/v1/55ef1536e4b0e3c6bb1c75c3/b3f9fcbf-f313-477f-b45e-fbcd9ed0930b/willow+passage+with+bugs.jpg" alt="img-5" />
+          <div class="overlay1"><div class="overlay-text">Handles and hardwares</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://www.99acres.com/microsite/articles/files/2023/06/wallpaper-design-featured-image-1.jpg" alt="img-6" />
+          <div class="overlay1"><div class="overlay-text">Wall coverings</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://images.adsttc.com/media/images/619d/4b92/3143/4064/b38b/7bc3/newsletter/primary-all-a.jpg?1637698456" alt="img-7" />
+          <div class="overlay1"><div class="overlay-text">Material and Finishes</div></div>
+        </div>
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="600">
+          <img class="image-item" src="https://5.imimg.com/data5/SELLER/Default/2022/5/HV/ZZ/LI/106321217/luxury-bedroom-interior-design-service.jpg" alt="img-8" />
+          <div class="overlay1"><div class="overlay-text">Luxury services</div></div>
+        </div>
+        
+        </ul>
+        
+            <!-- Content for next slide button -->
+       
+          
+        <div class="slider-scrollbar" data-aos="fade-in" data-aos-delay="500">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+
+
+
+
+
+    <script>
+        
+    </script>
+
+    <h1 style="text-align: center; font-size: 50px; font-weight: normal;" data-aos="fade-in" data-aos-delay="100">
+        Looking for customized wardrobe design?
+    </h1>
+    <h3 style="text-align: center; font-size: 20px; font-weight: normal;" data-aos="fade-in" data-aos-delay="200">
+        Do you want customise wardrobe design for your room on the best budget?
+    </h3>
+
+    <div class="div3" data-aos="fade-up" data-aos-delay="300">
+        <div class="div4" data-aos="fade-in" data-aos-delay="400">
+            <center>
+                <img src="https://st.hzcdn.com/simgs/pictures/garderobnye/fotosaemka-interyera-kvartiry-v-zhk-sadovye-kvartaly-marion-studio-img~98f16c720932a9d0_14-4742-1-d656846.jpg" class="image1">
+            </center><br>
+            <div style="background-color: rgba(196,173,157,0.5); padding: 0 20px; border-radius: 25px; height: 250px;">
+                <h4 style="text-align: center; padding: 10px 20px;">Walk-In Closet</h4>
+                <div style="text-align: center; padding-bottom: 10px;">A space to store all your clothes, bags, accessories, shoes, cosmetics and all personal collections.</div>
+            </div>
+        </div>
+    	<div class="div4">
+    		<center><img src="https://production-modular-kitchens.s3.amazonaws.com/wardrobes/images/with-loft/lfw_6.jpg" class="image1"><center><br>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px;height: 250px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Wardrobe with Loft</h4>
+    		<div style="text-align: center;padding-bottom: 10px;">Placed in bedrooms to store clothes, accessories and personal belongings, with lofts makes extra space for your travel bags.</div>
+    	</div>
+    	</div>
+    	<div class="div4">
+    		<center><img src="https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2017/04/30163659/oak-wood-l-shaped-wardrobe.jpg" class="image1"><center><br>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px; height: 250px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Corner Wardrobe</h4>
+    		<div style="text-align: center;padding-bottom: 10px;">Placed in corner of the bedroom maximising storage space in blind corners, can be added with loft storage.</div>
+    	</div>
+    	</div>
+    	<div class="div4">
+    		<center><img src="https://4.imimg.com/data4/LF/SN/MY-5374777/apribile-straight-wardrobe.jpg" class="image1"><center><br>
+    			<div style="background-color: rgba(196,173,157,0.5);padding: 0 20px;border-radius: 25px;height: 250px;">
+    		<h4 style="text-align: center; padding: 10px 20px;">Straight Wardrobe</h4>
+    		<div style="text-align: center;padding-bottom: 10px;">A linear cabinet with classy look to store clothes, comes with wide variety of internal and shutter configurations. </div>
+    	</div>
+    	</div>
+    </div>
+
+	</section>
+    <section class="section3">   
+    </section>
+     <footer class="section-footer section text-light custom-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="f-about">
+                    <h3>About</h3>
+                    <p>At RoomCraft, our passion lies in crafting bespoke living spaces that seamlessly blend style, comfort, and functionality to reflect your unique personality and lifestyle.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="f-links">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="f-services">
+                    <h3>Services</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Interior Design Consultation</a></li>
+                        <li><a href="#">Customized Room Design</a></li>
+                        <li><a href="#">Furniture Selection</a></li>
+                        <li><a href="#">Color Scheme Coordination</a></li>
+                        <li><a href="#">Space Planning</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="f-address">
+                    <h3>Have a Questions?</h3>
+                    <address>
+                        <p><ion-icon name="location-outline"></ion-icon> Pune, India</p>
+                        <p><ion-icon name="call-outline"></ion-icon> <a href="#">+919812345689</a></p>
+                        <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:info@RoomCraft.com">info@RoomCraft.com</a></p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+	<script type="text/javascript">
+		var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });
+
+	const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+	</script>
+
+
+
+  <!-- AOS refresh on window load -->
+  <script>
+    window.addEventListener('load', () => {
+      AOS.refresh(); // Refresh AOS to ensure animations work smoothly after content is fully loaded
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.swiper', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          spaceBetween: 20,
+          loop: true, // Optional, if you want infinite loop
+        });
+      });
+      
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      AOS.refresh(); 
+    });
+  </script>
+
+<script>
+  const getStartedButton = document.getElementById('getStartedButton');
+  getStartedButton.addEventListener('click', () => {
+    window.location.href = 'http://localhost:8501/'; // Replace with the actual Streamlit server URL
+  });
+</script>
+   <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="static/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
